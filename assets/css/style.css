@@ -1,0 +1,669 @@
+/* =========================================================
+   APPLE CLONE — style.css
+   ========================================================= */
+
+:root {
+  --apple-black: #000;
+  --apple-white: #fff;
+  --apple-gray-bg: #f5f5f7;
+  --apple-gray-text: #6e6e73;
+  --apple-gray-dark: #1d1d1f;
+  --apple-blue: #06c;
+  --apple-blue-hover: #0077ed;
+
+  --nav-height: 44px;
+
+  --font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --transition-fast: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--apple-gray-dark);
+  background: var(--apple-white);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.btn-link {
+  display: inline-block;
+  color: var(--apple-blue);
+  font-size: 17px;
+  line-height: 1.381;
+  font-weight: 400;
+  transition: color var(--transition-fast);
+}
+
+.btn-link:hover {
+  color: var(--apple-blue-hover);
+  text-decoration: underline;
+}
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+.globalnav {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  height: var(--nav-height);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  color: var(--apple-black);
+}
+
+.globalnav-inner {
+  max-width: 1024px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 min(5vw, 20px);
+}
+
+.globalnav-list {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.globalnav-item {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.globalnav-item-apple {
+  flex: 0 0 auto;
+  padding-right: clamp(8px, 2vw, 20px);
+}
+
+.globalnav-link-apple {
+  display: flex;
+  align-items: center;
+  color: var(--apple-black);
+}
+
+.apple-logo {
+  display: block;
+}
+
+.globalnav-link {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.8);
+  white-space: nowrap;
+  opacity: 0.85;
+  transition: opacity var(--transition-fast);
+}
+
+.globalnav-link:hover {
+  opacity: 1;
+}
+
+.globalnav-item-search,
+.globalnav-item-bag {
+  flex: 0 0 auto;
+  padding-left: clamp(8px, 2vw, 18px);
+}
+
+.globalnav-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--apple-black);
+  width: 20px;
+  height: 20px;
+}
+
+.globalnav-menutrigger {
+  display: none;
+  width: 24px;
+  height: 24px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.globalnav-menutrigger span {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  background: var(--apple-black);
+  transition: transform var(--transition-fast);
+}
+
+.globalnav-mobile {
+  display: none;
+  position: absolute;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid #d2d2d7;
+  padding: 8px 24px 24px;
+}
+
+.globalnav-mobile.open {
+  display: block;
+}
+
+.globalnav-mobile ul li {
+  border-bottom: 1px solid #e5e5e7;
+}
+
+.globalnav-mobile ul li a {
+  display: block;
+  padding: 14px 0;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+/* =========================================================
+   HERO — EVENTO
+   ========================================================= */
+.hero {
+  text-align: center;
+  padding: 40px 20px 0;
+  overflow: hidden;
+}
+
+.hero-event-text h1 {
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.003em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.hero-event-text p {
+  font-size: clamp(16px, 2vw, 21px);
+  color: var(--apple-gray-dark);
+  font-weight: 400;
+  line-height: 1.381;
+  margin-bottom: 10px;
+}
+
+.hero-event-media {
+  margin-top: 24px;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-event-media img {
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+
+/* =========================================================
+   PRODUCT TILES (genérico)
+   ========================================================= */
+.product-tile {
+  position: relative;
+  overflow: hidden;
+  padding: 56px 20px 64px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tile-dark {
+  background: #000;
+  color: #f5f5f7;
+}
+
+.tile-light {
+  background: var(--apple-gray-bg);
+  color: var(--apple-gray-dark);
+}
+
+.tile-dark .tile-note {
+  color: #86868b;
+}
+
+.tile-light .tile-note {
+  color: var(--apple-gray-text);
+}
+
+.tile-text h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.05;
+  margin-bottom: 6px;
+}
+
+.tile-sub {
+  font-size: clamp(17px, 2vw, 21px);
+  font-weight: 400;
+  line-height: 1.381;
+  margin-bottom: 4px;
+}
+
+.tile-note {
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.tile-links {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.tile-media-link {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 32px;
+}
+
+.tile-media-link img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+}
+
+/* Tile em ordem: texto em cima, imagem full width embaixo (iPhone / MacBook Air) */
+.tile-full {
+  padding: 64px 20px 0;
+}
+
+.tile-text-top {
+  margin-bottom: 0;
+}
+
+.tile-full .tile-media-link {
+  margin-top: 32px;
+  max-width: 1100px;
+}
+
+.tile-full .tile-media-link img {
+  border-radius: 0;
+}
+
+/* Pares lado a lado (iPad Air / MacBook Neo, Watch / AirPods) */
+.tile-half-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0;
+  gap: 2px;
+  text-align: center;
+}
+
+.tile-half {
+  padding: 56px 20px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tile-half .tile-media-link {
+  max-width: 420px;
+  margin-top: 0;
+  margin-bottom: 28px;
+  order: -1;
+}
+
+.tile-half .tile-media-link img {
+  border-radius: 18px;
+}
+
+/* =========================================================
+   CARROSSEL APPLE TV
+   ========================================================= */
+.tv-gallery {
+  position: relative;
+  padding: 64px 0;
+  background: #000;
+  overflow: hidden;
+}
+
+.tv-gallery-track {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 0 5vw;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.tv-gallery-track::-webkit-scrollbar {
+  display: none;
+}
+
+.tv-card {
+  position: relative;
+  flex: 0 0 auto;
+  width: min(80vw, 320px);
+  aspect-ratio: 3 / 4;
+  border-radius: 18px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  color: #fff;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  transition: transform var(--transition-fast);
+}
+
+.tv-card:hover {
+  transform: scale(1.015);
+}
+
+.tv-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.75) 100%);
+}
+
+.tv-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.tv-kicker {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+  color: #f5f5f7;
+}
+
+.tv-kicker em {
+  font-style: normal;
+  color: #06c3ff;
+  margin-left: 4px;
+}
+
+.tv-title {
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+
+.tv-show-name {
+  font-size: 13px;
+  color: #d2d2d7;
+}
+
+.tv-card-1 { background-color: #1a1a2e; background-image: linear-gradient(135deg,#1a1a2e,#3a2a5e); }
+.tv-card-2 { background-color: #2e2417; background-image: linear-gradient(135deg,#3a2f1c,#7a5a2c); }
+.tv-card-3 { background-color: #1c1c1c; background-image: linear-gradient(135deg,#232323,#4a4a4a); }
+.tv-card-4 { background-color: #331414; background-image: linear-gradient(135deg,#3a1717,#7a2c2c); }
+.tv-card-5 { background-color: #101820; background-image: linear-gradient(135deg,#101820,#22384a); }
+.tv-card-6 { background-color: #0d2b2b; background-image: linear-gradient(135deg,#0d2b2b,#1c5555); }
+.tv-card-7 { background-color: #14213d; background-image: linear-gradient(135deg,#14213d,#2c4a7a); }
+
+.tv-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-fast);
+  z-index: 2;
+}
+
+.tv-nav:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.tv-nav-prev { left: 16px; }
+.tv-nav-next { right: 16px; }
+
+.tv-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.tv-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #515154;
+  transition: background var(--transition-fast);
+}
+
+.tv-dot.active {
+  background: #fff;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer {
+  background: var(--apple-gray-bg);
+  color: var(--apple-gray-text);
+  font-size: 12px;
+  padding: 20px min(5vw, 22px) 40px;
+}
+
+.footer-legal-top ol {
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+.footer-legal-top li,
+.footer-legal-top p {
+  margin-bottom: 8px;
+  line-height: 1.33;
+}
+
+.footer-legal-top a {
+  color: var(--apple-gray-text);
+  text-decoration: underline;
+}
+
+.footer-rule {
+  border: none;
+  border-top: 1px solid #d2d2d7;
+  margin: 14px 0;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  padding: 8px 0;
+}
+
+.footer-col h3 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.footer-col h3:first-child {
+  margin-top: 0;
+}
+
+.footer-col ul {
+  margin-bottom: 4px;
+}
+
+.footer-col li {
+  margin-bottom: 10px;
+}
+
+.footer-col a {
+  color: var(--apple-gray-text);
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom p {
+  margin-bottom: 8px;
+  line-height: 1.33;
+}
+
+.footer-bottom a {
+  color: var(--apple-gray-text);
+  text-decoration: underline;
+}
+
+.footer-country {
+  margin: 14px 0 !important;
+}
+
+.footer-bottom-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 0;
+  border-top: 1px solid #d2d2d7;
+  padding-top: 14px;
+  margin-top: 6px;
+}
+
+.footer-bottom-links li:not(:last-child)::after {
+  content: "|";
+  margin: 0 8px;
+  color: #d2d2d7;
+}
+
+.footer-bottom-links a {
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.footer-bottom-links a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+/* Tablet */
+@media (max-width: 1068px) {
+  .footer-columns {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .globalnav-link {
+    display: none;
+  }
+
+  .globalnav-item {
+    flex: 0 0 auto;
+  }
+
+  .globalnav-item-apple {
+    flex: 1 1 auto;
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .globalnav-menutrigger {
+    display: flex;
+  }
+
+  .globalnav-item-search,
+  .globalnav-item-bag {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 734px) {
+  .tile-half-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-tile {
+    padding: 40px 20px 48px;
+  }
+
+  .tile-full {
+    padding: 48px 16px 0;
+  }
+
+  .tile-links {
+    gap: 16px;
+  }
+
+  .tv-gallery {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-columns {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-event-text p br {
+    display: none;
+  }
+}
