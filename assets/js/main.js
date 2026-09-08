@@ -5,6 +5,37 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   /* -------------------------------------------------
+     MEGA MENU (hover na navbar)
+  ------------------------------------------------- */
+  const navItems = document.querySelectorAll(".globalnav-item[data-menu]");
+  const megaMenu = document.getElementById("megaMenu");
+  const panels = megaMenu ? megaMenu.querySelectorAll(".megamenu-panel") : [];
+  let closeTimeout;
+
+  function showPanel(key) {
+    clearTimeout(closeTimeout);
+    panels.forEach((p) => p.classList.toggle("active", p.dataset.panel === key));
+    megaMenu.classList.add("open");
+  }
+
+  function scheduleClose() {
+    clearTimeout(closeTimeout);
+    closeTimeout = setTimeout(() => {
+      megaMenu.classList.remove("open");
+    }, 150);
+  }
+
+  if (megaMenu && navItems.length) {
+    navItems.forEach((item) => {
+      item.addEventListener("mouseenter", () => showPanel(item.dataset.menu));
+      item.addEventListener("mouseleave", scheduleClose);
+    });
+
+    megaMenu.addEventListener("mouseenter", () => clearTimeout(closeTimeout));
+    megaMenu.addEventListener("mouseleave", scheduleClose);
+  }
+
+  /* -------------------------------------------------
      MENU MOBILE
   ------------------------------------------------- */
   const menuTrigger = document.getElementById("menuTrigger");
