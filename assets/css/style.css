@@ -20,6 +20,10 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -264,6 +268,14 @@ input {
     opacity: .92;
 }
 
+.product-copy h1,
+.product-copy h2 {
+    font-size: 56px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    line-height: 1.0714285714;
+    margin: 0 0 12px;
+}
 
 /* ================= SEÇÕES DE PRODUTO ================= */
 
@@ -326,9 +338,12 @@ input {
 .pro-section .product-copy {
     position: absolute;
     top: 45px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
+    width: min(650px, 92%);
+    margin: 0 auto;
     z-index: 2;
+    text-align: center;
 }
 
 .pro-section .product-description {
@@ -389,9 +404,9 @@ input {
     position: absolute;
     z-index: 1;
     left: 50%;
-    bottom: -20px;
+    bottom: -50px;
     transform: translateX(-50%);
-    width: min(760px, 88%);
+    width: min(740px, 82%);
     height: auto;
 }
 
@@ -405,9 +420,22 @@ input {
 }
 
 .card-copy h2 {
-    margin: 0 0 10px;
-    font-size: 36px;
-    letter-spacing: -0.03em;
+    margin: 0 0 12px;
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    line-height: 1.08;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.apple-mini-logo {
+    width: 38px;
+    height: 44px;
+    fill: currentColor;
+    flex-shrink: 0;
 }
 
 .card-copy p {
@@ -431,10 +459,13 @@ input {
 
 .airpods-section .product-copy {
     position: absolute;
+    bottom: 48px;
+    left: 0;
+    right: 0;
+    width: min(720px, 92%);
+    margin: 0 auto;
     z-index: 2;
-    top: 45px;
-    left: 50%;
-    transform: translateX(-50%);
+    text-align: center;
 }
 
 .airpods-section .product-description {
@@ -748,9 +779,10 @@ footer p {
     }
 
     .duo-image-wrap {
-        width: 650px;
-        max-width: 150%;
+        width: 92%;
+        max-width: 92%;
     }
+
 
     .pro-section,
     .airpods-section {
@@ -758,13 +790,14 @@ footer p {
     }
 
     .pro-image {
-        width: 780px;
-        max-width: none;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
     }
 
     .airpods-image {
-        width: 900px;
-        max-width: none;
+        width: 100%;
+        max-width: 100%;
     }
 
     .watch-card {
