@@ -51,6 +51,10 @@ const megaBackdrop = document.getElementById("mega-backdrop");
 
 // conteúdo de cada painel — edite/adicione conforme seus produtos
 const menuData = {
+    loja: {
+        title: "Comprar na Apple",
+        links: ["Comprar os lançamentos", "Mac", "iPad", "iPhone", "Apple Watch", "AirPods"]
+    },
     mac: {
         title: "Explorar Mac",
         links: ["MacBook Air", "MacBook Pro", "iMac", "Mac mini", "Mac Studio"]
@@ -70,6 +74,22 @@ const menuData = {
     airpods: {
         title: "Explorar AirPods",
         links: ["AirPods 5", "AirPods Pro", "AirPods Max"]
+    },
+    "tv-e-casa": {
+        title: "Explorar TV e Casa",
+        links: ["Apple TV 4K", "Siri Remote", "HomeKit"]
+    },
+    entretenimento: {
+        title: "Explorar Entretenimento",
+        links: ["Apple TV+", "Apple Music", "Apple Arcade", "Apple Podcasts"]
+    },
+    acessorios: {
+        title: "Explorar Acessórios",
+        links: ["Capas", "Carregadores", "Cabos", "Adaptadores"]
+    },
+    suporte: {
+        title: "Suporte",
+        links: ["Central de Ajuda", "Verificar cobertura", "Agendar reparo"]
     }
 };
 

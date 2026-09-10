@@ -10,10 +10,11 @@
     --apple-gray: #f5f5f7;
     --apple-dark: #000;
     --nav-height: 44px;
-    --section-gap: 12px;
+    --section-gap: 0px;
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
         "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
 }
+
 
 * {
     box-sizing: border-box;
