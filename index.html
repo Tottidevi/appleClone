@@ -1,405 +1,230 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Apple (Brasil)</title>
-  <meta name="description" content="Conheça o mundo inovador da Apple e compre seu iPhone, iPad, Apple Watch, Mac e Apple TV.">
-  <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple — Clone</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <nav class="navbar-content">
+            <a href="#" class="apple-logo" aria-label="Apple">
+                <svg viewBox="0 0 24 28" aria-hidden="true">
+                    <path d="M18.7 14.9c0-3.1 2.5-4.6 2.6-4.7-1.4-2.1-3.6-2.4-4.4-2.4-1.9-.2-3.7 1.1-4.7 1.1-1 0-2.5-1.1-4.1-1.1-2.1 0-4 1.2-5.1 3.1-2.2 3.8-.6 9.4 1.5 12.5 1 1.5 2.2 3.2 3.8 3.1 1.5-.1 2.1-1 4-1s2.5 1 4 1c1.7 0 2.7-1.5 3.7-3 .9-1.3 1.3-2.7 1.7-3.4-.1 0-3-.1-3-5.2ZM15.7 6c.9-1.1 1.5-2.6 1.3-4.1-1.3.1-2.8.9-3.7 1.9-.8.9-1.5 2.4-1.3 3.8 1.4.1 2.8-.6 3.7-1.6Z"/>
+                </svg>
+            </a>
 
-  <!-- ===================== NAVBAR ===================== -->
-  <header class="globalnav" id="globalnav">
-    <nav class="globalnav-inner">
-      <ul class="globalnav-list">
-        <li class="globalnav-item globalnav-item-apple">
-          <a href="https://www.apple.com/br/" class="globalnav-link-apple" aria-label="Apple">
-            <svg class="apple-logo" viewBox="0 0 14 44" width="14" height="44" aria-hidden="true">
-              <path fill="currentColor" d="M13.0729 17.6825C12.9808 17.7502 11.4451 18.6089 11.4451 20.6116C11.4451 22.9096 13.4361 23.7509 13.4979 23.7716C13.4874 23.8393 13.1691 24.9411 12.4141 26.0501C11.7415 27.0223 11.0344 27.9946 9.9622 27.9946C8.87233 27.9946 8.57855 27.3395 7.30575 27.3395C6.05868 27.3395 5.60868 28.0165 4.62432 28.0165C3.63996 28.0165 2.94975 27.1108 2.16575 26.0018C1.24704 24.6857 0.503677 22.6295 0.503677 20.6788C0.503677 17.5828 2.55954 15.9269 4.58286 15.9269C5.65037 15.9269 6.53868 16.6435 7.20539 16.6435C7.83936 16.6435 8.83229 15.8829 10.0264 15.8829C10.4764 15.8829 12.0121 15.9214 13.0729 17.6825ZM9.5121 14.4321C10.0264 13.8286 10.3949 12.9942 10.3949 12.1598C10.3949 12.0473 10.3854 11.9333 10.3665 11.8125C9.53132 11.844 8.53868 12.3648 7.9439 13.0533C7.47025 13.5904 7.02556 14.4248 7.02556 15.2707C7.02556 15.3958 7.04471 15.5209 7.05411 15.5619C7.10486 15.5715 7.18715 15.5825 7.26944 15.5825C8.02166 15.5825 8.96694 15.0847 9.5121 14.4321Z"></path>
-            </svg>
-          </a>
-        </li>
-        <li class="globalnav-item"><a href="https://www.apple.com/br/shop/goto/store" class="globalnav-link">Loja</a></li>
-        <li class="globalnav-item"><a href="https://www.apple.com/br/mac/" class="globalnav-link">Mac</a></li>
-        <li class="globalnav-item"><a href="https://www.apple.com/br/ipad/" class="globalnav-link">iPad</a></li>
-        <li class="globalnav-item"><a href="https://www.apple.com/br/iphone/" class="globalnav-link">iPhone</a></li>
-        <li class="globalnav-item"><a href="https://www.apple.com/br/watch/" class="globalnav-link">Apple Watch</a></li>
-        <li class="globalnav-item"><a href="https://www.apple.com/br/airpods/" class="globalnav-link">AirPods</a></li>
-        <li class="globalnav-item"><a href="https://www.apple.com/br/tv-home/" class="globalnav-link">TV e Casa</a></li>
-        <li class="globalnav-item"><a href="https://www.apple.com/br/entertainment/" class="globalnav-link">Entretenimento</a></li>
-        <li class="globalnav-item"><a href="https://www.apple.com/br/shop/goto/buy_accessories" class="globalnav-link">Acessórios</a></li>
-        <li class="globalnav-item"><a href="https://support.apple.com/pt-br/" class="globalnav-link">Suporte</a></li>
+            <div class="nav-links">
+                <a href="#iphone-duo" data-menu="loja">Loja</a>
+                <a href="#iphone-duo" data-menu="mac">Mac</a>
+                <a href="#iphone-duo" data-menu="ipad">iPad</a>
+                <a href="#iphone-duo" data-menu="iphone">iPhone</a>
+                <a href="#watch" data-menu="watch">Watch</a>
+                <a href="#airpods" data-menu="airpods">AirPods</a>
+                <a href="#more" data-menu="tv-e-casa">TV e Casa</a>
+                <a href="#more" data-menu="entretenimento">Entretenimento</a>
+                <a href="#more" data-menu="acessorios">Acessórios</a>
+                <a href="#footer" data-menu="suporte">Suporte</a>
+            </div>
 
-        <li class="globalnav-item globalnav-item-search">
-          <button class="globalnav-icon-btn" id="searchBtn" aria-label="Buscar">
-            <svg viewBox="0 0 16 44" width="16" height="16" aria-hidden="true">
-              <path fill="currentColor" d="M15.0728 24.4967L11.706 21.1327C12.408 20.1547 12.8 18.9707 12.8 17.7167C12.8 14.3527 10.064 11.6167 6.7 11.6167C3.336 11.6167 0.6 14.3527 0.6 17.7167C0.6 21.0807 3.336 23.8167 6.7 23.8167C7.954 23.8167 9.138 23.4247 10.116 22.7227L13.48 26.0889C13.6 26.2087 13.762 26.2727 13.924 26.2727C14.086 26.2727 14.248 26.2087 14.368 26.0889L15.0728 25.3849C15.3168 25.1409 15.3168 24.7407 15.0728 24.4967ZM6.7 22.4167C4.1116 22.4167 2 20.3051 2 17.7167C2 15.1283 4.1116 13.0167 6.7 13.0167C9.2884 13.0167 11.4 15.1283 11.4 17.7167C11.4 20.3051 9.2884 22.4167 6.7 22.4167Z"></path>
-            </svg>
-          </button>
-        </li>
-        <li class="globalnav-item globalnav-item-bag">
-          <a href="https://www.apple.com/br/shop/goto/bag" class="globalnav-icon-btn" aria-label="Sacola">
-            <svg viewBox="0 0 14 44" width="14" height="14" aria-hidden="true">
-              <path fill="currentColor" d="M11.3535 16.0454H9.83979C9.83512 14.6664 9.28356 13.3456 8.30765 12.3698C7.33174 11.3939 6.01092 10.8423 4.63197 10.8377C3.25301 10.8423 1.93219 11.3939 0.956284 12.3698C-0.0196254 13.3456 -0.571188 14.6664 -0.565912 16.0454H-2.0777C-2.29976 16.0479 -2.51179 16.1385 -2.66735 16.2971C-2.82291 16.4557 -2.90943 16.6693 -2.9082 16.8914V27.5779C-2.90729 28.4718 -2.55155 29.3288 -1.91913 29.9612C-1.28672 30.5936 -0.429679 30.9493 0.464184 30.9502H8.79976C9.69362 30.9493 10.5507 30.5936 11.1831 29.9612C11.8155 29.3288 12.1712 28.4718 12.1721 27.5779V16.8914C12.1734 16.6693 12.0868 16.4557 11.9313 16.2971C11.7757 16.1385 11.5637 16.0479 11.3417 16.0454H11.3535Z"></path>
-            </svg>
-          </a>
-        </li>
-      </ul>
+            <div class="mega-backdrop" id="mega-backdrop"></div>
 
-      <button class="globalnav-menutrigger" id="menuTrigger" aria-label="Menu">
-        <span></span><span></span>
-      </button>
-    </nav>
+            <div class="mega-menu" id="mega-menu">
+            <div class="mega-menu-content" id="mega-menu-content"></div>
+            </div>
 
-    <!-- Menu mobile -->
-    <div class="globalnav-mobile" id="mobileMenu">
-      <ul>
-        <li><a href="https://www.apple.com/br/shop/goto/store">Loja</a></li>
-        <li><a href="https://www.apple.com/br/mac/">Mac</a></li>
-        <li><a href="https://www.apple.com/br/ipad/">iPad</a></li>
-        <li><a href="https://www.apple.com/br/iphone/">iPhone</a></li>
-        <li><a href="https://www.apple.com/br/watch/">Apple Watch</a></li>
-        <li><a href="https://www.apple.com/br/airpods/">AirPods</a></li>
-        <li><a href="https://www.apple.com/br/tv-home/">TV e Casa</a></li>
-        <li><a href="https://www.apple.com/br/entertainment/">Entretenimento</a></li>
-        <li><a href="https://www.apple.com/br/shop/goto/buy_accessories">Acessórios</a></li>
-        <li><a href="https://support.apple.com/pt-br/">Suporte</a></li>
-      </ul>
-    </div>
-  </header>
+            <div class="nav-icons">
+                <button class="nav-icon" id="search-button" aria-label="Buscar">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="10.8" cy="10.8" r="6.7"></circle>
+                        <path d="M16 16l5 5"></path>
+                    </svg>
+                </button>
 
-  <main>
+                <button class="nav-icon" aria-label="Sacola">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M6.5 8.5h11l1 12h-13l1-12Z"></path>
+                        <path d="M9 8.5V6a3 3 0 0 1 6 0v2.5"></path>
+                    </svg>
+                </button>
 
-    <!-- ===================== HERO: EVENTO ===================== -->
-    <section class="hero hero-event">
-      <div class="hero-event-text">
-        <h1>Surpreendente e brilhante.</h1>
-        <p>Assista à apresentação especial da Apple.<br>Dia 09/09, às 14h (BRT).</p>
-        <a class="btn btn-link" href="https://www.apple.com/br/apple-events/home/built/assets/event/event.ics">Adicionar ao calendário&nbsp;&rsaquo;</a>
-      </div>
-      <div class="hero-event-media">
-        <img src="https://www.apple.com/v/home/images/apple-event-september-2026/a/hero_apple_event_september_2026__fkq1w4m2h2eu_large.jpg"
-             alt="Logotipo da Apple com um efeito de néon brilhante em tons de azul e rosa, um brilho branco intenso no centro, sobre um fundo em degradê" loading="eager">
-      </div>
-    </section>
+                <button class="mobile-menu-button" id="mobile-menu-button" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
 
-    <!-- ===================== MAC MINI ===================== -->
-    <section class="product-tile tile-dark" id="mac-mini">
-      <a href="https://www.apple.com/br/mac-mini/" class="tile-media-link">
-        <img src="https://www.apple.com/v/home/images/mac-mini/a/hero_mac_mini_m6__cyyrlmnibxea_large.jpg"
-             alt="Imagem da frente do Mac mini equilibrado na ponta dos dedos de uma mão esticada" loading="lazy">
-      </a>
-      <div class="tile-text">
-        <h2>Mac mini</h2>
-        <p class="tile-sub">Agora com M6 e M5 Pro.</p>
-        <p class="tile-note">Confira em breve a disponibilidade</p>
-        <div class="tile-links">
-          <a class="btn btn-link" href="https://www.apple.com/br/mac-mini/">Saiba mais&nbsp;&rsaquo;</a>
-          <a class="btn btn-link" href="https://www.apple.com/br/shop/goto/buy_mac/mac_mini">Ver preços&nbsp;&rsaquo;</a>
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#iphone-duo" data-menu="loja">Loja</a>
+            <a href="#iphone-duo" data-menu="mac">Mac</a>
+            <a href="#iphone-duo" data-menu="ipad">iPad</a>
+            <a href="#iphone-duo" data-menu="iphone">iPhone</a>
+            <a href="#watch" data-menu="watch">Watch</a>
+            <a href="#airpods" data-menu="airpods">AirPods</a>
+            <a href="#more" data-menu="tv-e-casa">TV e Casa</a>
+            <a href="#more" data-menu="entretenimento">Entretenimento</a>
+            <a href="#more" data-menu="acessorios">Acessórios</a>
+            <a href="#footer" data-menu="suporte">Suporte</a>
         </div>
-      </div>
-    </section>
+    </header>
 
-    <!-- ===================== MAC STUDIO ===================== -->
-    <section class="product-tile tile-light" id="mac-studio">
-      <a href="https://www.apple.com/br/mac-studio/" class="tile-media-link">
-        <img src="https://www.apple.com/v/home/images/mac-studio/a/hero_mac_studio_m5__dmmzuuasyo2u_large.jpg"
-             alt="Parte da frente do Mac Studio prateado com duas portas USB-C" loading="lazy">
-      </a>
-      <div class="tile-text">
-        <h2>Mac Studio</h2>
-        <p class="tile-sub">Agora com M5 Max e M5 Ultra.</p>
-        <p class="tile-note">Confira em breve a disponibilidade</p>
-        <div class="tile-links">
-          <a class="btn btn-link" href="https://www.apple.com/br/mac-studio/">Saiba mais&nbsp;&rsaquo;</a>
-          <a class="btn btn-link" href="https://www.apple.com/br/shop/goto/buy_mac/mac_studio">Ver preços&nbsp;&rsaquo;</a>
+    <main>
+        <!-- HERO DA APRESENTAÇÃO -->
+        <section class="event-hero">
+            
+          
+
+            <div class="event-content">
+                <p>
+                    Apresentamos o iPhone Duo, o iPhone 18 Pro, o Apple Watch Series 12,<br class="desktop-only">
+                    o Apple Watch Ultra 4 e os AirPods 5.
+                </p>
+
+                <a href="https://www.apple.com/apple-events/" class="event-button" target="_blank" rel="noopener">
+                    Assistir à apresentação
+                </a>
+            </div>
+        </section>
+
+        <!-- IPHONE DUO -->
+        <section class="product-section duo-section" id="iphone-duo">
+            <div class="product-copy">
+                <h1>iPhone Duo</h1>
+
+                <p class="product-description">
+                    A maior tela em um iPhone. Dobrável, versátil e formidável.<br>
+                    Com experiências reimaginadas do iOS para todas as novas<br class="desktop-only">
+                    formas de usar.
+                </p>
+
+                <p class="availability">
+                    Pré-venda a partir de 16/10, às 9h (BRT)<br>
+                    Disponível a partir de 23/10
+                </p>
+
+                <div class="buttons">
+                <a href="#" class="button button-black">Saiba mais</a>
+                <a href="#" class="button button-outline-black">Ver preços</a>
+                </div>
+            </div>
+
+            <div class="duo-image-wrap">
+                <img src="assets/img/iphone_duo.jpg" alt="iPhone Duo aberto">
+            </div>
+        </section>
+
+        <!-- IPHONE 18 PRO -->
+        <section class="product-section pro-section">
+            <div class="product-copy">
+                <h2>iPhone 18 Pro</h2>
+
+                <p class="product-description">
+                    Um grande salto em bateria, desempenho e câmera no iPhone.
+                </p>
+
+                <p class="availability">
+                    Pré-venda a partir de 12/09, às 9h (BRT)<br>
+                    Disponível a partir de 18/09
+                </p>
+
+                <div class="buttons">
+                    <a href="#" class="button button-white">Saiba mais</a>
+                    <a href="#" class="button button-outline-white">Ver preços</a>
+                </div>
+            </div>
+
+            <img class="full-product-image pro-image" src="assets/img/iphone_18_pro.jpg" alt="iPhone 18 Pro">
+        </section>
+
+        <!-- APPLE WATCH -->
+        <section class="watch-grid" id="watch">
+            <article class="watch-card series-card">
+                <div class="card-copy">
+                    <h2>Apple Watch Series 12</h2>
+                    <p>
+                        O novo Sistema de Medições de Saúde traz a medição
+                        de frequência cardíaca mais precisa em um wearable.
+                    </p>
+
+                    <p class="availability">Confira em breve a disponibilidade</p>
+
+                    <div class="buttons">
+                        <a href="#" class="button button-blue">Saiba mais</a>
+                        <a href="#" class="button button-outline">Ver preços</a>
+                    </div>
+                </div>
+
+                <img src="assets/img/apple_watch_series_12.jpg" alt="Apple Watch Series 12">
+            </article>
+
+            <article class="watch-card ultra-card">
+                <div class="card-copy">
+                    <h2>Apple Watch Ultra 4</h2>
+                    <p>
+                        A maior duração de bateria em um Apple Watch.
+                        Agora com até 45 horas de exercício prolongado máximo.
+                    </p>
+
+                    <p class="availability">Confira em breve a disponibilidade</p>
+
+                    <div class="buttons">
+                        <a href="#" class="button button-blue">Saiba mais</a>
+                        <a href="#" class="button button-outline">Ver preços</a>
+                    </div>
+                </div>
+
+                <img src="assets/img/apple_watch_ultra_4.jpg" alt="Apple Watch Ultra 4">
+            </article>
+        </section>
+
+        <!-- AIRPODS -->
+        <section class="product-section airpods-section" id="airpods">
+            <div class="product-copy">
+                <h2>AirPods 5</h2>
+
+                <p class="product-description">
+                    Cancelamento Ativo de Ruído até 1,5x melhor que na geração anterior.<br>
+                    E uma qualidade de som ainda maior com a nova arquitetura acústica.
+                </p>
+
+                <p class="availability">
+                    Pré-venda a partir de 11/09, às 9h (BRT)<br>
+                    Disponíveis a partir de 18/09
+                </p>
+
+                <div class="buttons">
+                    <a href="#" class="button button-white">Saiba mais</a>
+                    <a href="#" class="button button-outline-white">Ver preços</a>
+                </div>
+            </div>
+
+            <img class="full-product-image airpods-image" src="assets/img/airpods_5_Mulher.jpg" alt="Mulher usando AirPods 5">
+        </section>
+
+        <!-- ÁREA FINAL -->
+        <section class="more-section" id="more">
+            <h2>Explore mais da Apple.</h2>
+            <a href="https://www.apple.com/br/" target="_blank" rel="noopener">Conheça a Apple <span>›</span></a>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <p>Clone acadêmico desenvolvido para a atividade de Programação Client-Side.</p>
+        <p>Projeto não oficial da Apple.</p>
+    </footer>
+
+    <div class="search-modal" id="search-modal">
+        <div class="search-box">
+            <button id="close-search" aria-label="Fechar">×</button>
+            <label for="search-input">Buscar</label>
+            <input type="search" id="search-input" placeholder="Buscar em apple.com">
         </div>
-      </div>
-    </section>
-
-    <!-- ===================== IPHONE ===================== -->
-    <section class="product-tile tile-full tile-dark" id="iphone">
-      <div class="tile-text tile-text-top">
-        <h2>iPhone</h2>
-        <p class="tile-sub">Conheça a nova geração<br>do iPhone.</p>
-        <div class="tile-links">
-          <a class="btn btn-link" href="https://www.apple.com/br/iphone/">Saiba mais&nbsp;&rsaquo;</a>
-          <a class="btn btn-link" href="https://www.apple.com/br/shop/goto/buy_iphone">Comprar iPhone&nbsp;&rsaquo;</a>
-        </div>
-      </div>
-      <a href="https://www.apple.com/br/iphone/" class="tile-media-link">
-        <img src="https://www.apple.com/v/home/images/iphone-family/a/promo_iphone_family__ftpjp9fda2uu_large.jpg"
-             alt="Família iPhone 17 Pro, iPhone 17, iPhone 17e e iPhone Air" loading="lazy">
-      </a>
-    </section>
-
-    <!-- ===================== MACBOOK AIR ===================== -->
-    <section class="product-tile tile-full tile-light" id="macbook-air">
-      <div class="tile-text tile-text-top">
-        <h2>MacBook Air</h2>
-        <p class="tile-sub">Agora com a potência do M5.</p>
-        <div class="tile-links">
-          <a class="btn btn-link" href="https://www.apple.com/br/macbook-air/">Saiba mais&nbsp;&rsaquo;</a>
-          <a class="btn btn-link" href="https://www.apple.com/br/shop/goto/buy_mac/macbook_air">Comprar&nbsp;&rsaquo;</a>
-        </div>
-      </div>
-      <a href="https://www.apple.com/br/macbook-air/" class="tile-media-link">
-        <img src="https://www.apple.com/v/home/images/macbook-air-m5/a/promo_macbook_air_m5__e5xk2yysqiie_large.jpg"
-             alt="Dois notebooks MacBook Air na cor azul-céu abertos formando uma seta" loading="lazy">
-      </a>
-    </section>
-
-    <!-- ===================== IPAD AIR ===================== -->
-    <section class="product-tile tile-half-pair">
-      <div class="tile-half tile-light" id="ipad-air">
-        <a href="https://www.apple.com/br/ipad-air/" class="tile-media-link">
-          <img src="https://www.apple.com/v/home/images/ipad-air-m4/a/promo_ipad_air_m4__bgcv7t286k8y_large.jpg"
-               alt="iPad Air mostrando câmera traseira e cantos arredondados" loading="lazy">
-        </a>
-        <div class="tile-text">
-          <h2>iPad Air</h2>
-          <p class="tile-sub">Agora com a potência do M4.</p>
-          <div class="tile-links">
-            <a class="btn btn-link" href="https://www.apple.com/br/ipad-air/">Saiba mais&nbsp;&rsaquo;</a>
-            <a class="btn btn-link" href="https://www.apple.com/br/shop/goto/buy_ipad/ipad_air">Comprar&nbsp;&rsaquo;</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- ===================== MACBOOK NEO ===================== -->
-      <div class="tile-half tile-dark" id="macbook-neo">
-        <a href="https://www.apple.com/br/macbook-neo/" class="tile-media-link">
-          <img src="https://www.apple.com/v/home/images/macbook-neo/a/promo_macbook_neo__f7dwpledmzm2_large.jpg"
-               alt="MacBook Neo amarelo-cítrico equilibrado nas pontas dos dedos" loading="lazy">
-        </a>
-        <div class="tile-text">
-          <h2>MacBook Neo</h2>
-          <p class="tile-sub">Um Mac incrível.<br>Uma escolha inteligente.</p>
-          <div class="tile-links">
-            <a class="btn btn-link" href="https://www.apple.com/br/macbook-neo/">Saiba mais&nbsp;&rsaquo;</a>
-            <a class="btn btn-link" href="https://www.apple.com/br/shop/goto/buy_mac/macbook_neo">Comprar&nbsp;&rsaquo;</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== APPLE WATCH / AIRPODS ===================== -->
-    <section class="product-tile tile-half-pair">
-      <div class="tile-half tile-light" id="apple-watch">
-        <a href="https://www.apple.com/br/apple-watch-series-11/" class="tile-media-link">
-          <img src="https://www.apple.com/br/home/built/promos/26_apple-watch-series-11_06/images/promo_apple_watch_series_11__b63hxviqvonm_large.jpg"
-               alt="Apple Watch Series 11 com caixa cor de ouro rosa de alumínio" loading="lazy">
-        </a>
-        <div class="tile-text">
-          <h2>Apple Watch Series 11</h2>
-          <p class="tile-sub">O parceiro ideal para cuidar da sua saúde.</p>
-          <div class="tile-links">
-            <a class="btn btn-link" href="https://www.apple.com/br/apple-watch-series-11/">Saiba mais&nbsp;&rsaquo;</a>
-            <a class="btn btn-link" href="https://www.apple.com/br/shop/goto/buy_watch/apple_watch_series_11">Comprar&nbsp;&rsaquo;</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="tile-half tile-light" id="airpods">
-        <a href="https://www.apple.com/br/airpods-pro/" class="tile-media-link">
-          <img src="https://www.apple.com/v/home/images/airpods-pro-3/a/promo_airpods_pro_3__e4755qofhnyq_large.jpg"
-               alt="AirPods Pro 3 na cor branca com pontas de silicone" loading="lazy">
-        </a>
-        <div class="tile-text">
-          <h2>AirPods Pro 3</h2>
-          <p class="tile-sub">O melhor Cancelamento Ativo de Ruído do mundo em fones intra&#8209;auriculares<sup>1</sup>.</p>
-          <div class="tile-links">
-            <a class="btn btn-link" href="https://www.apple.com/br/airpods-pro/">Saiba mais&nbsp;&rsaquo;</a>
-            <a class="btn btn-link" href="https://www.apple.com/br/shop/goto/buy_airpods/airpods_pro_3">Comprar&nbsp;&rsaquo;</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== CARROSSEL APPLE TV ===================== -->
-    <section class="tv-gallery" id="tv-gallery">
-      <div class="tv-gallery-track" id="tvTrack">
-        <a class="tv-card tv-card-1" href="https://tv.apple.com/br/show/materia-escura/umc.cmc.4luj45vtqpmjsvb6sc2675oeg">
-          <span class="tv-kicker">Stream now <em>Ficção científica</em></span>
-          <span class="tv-title">Não há mundo melhor do que o nosso lar.</span>
-          <span class="tv-show-name">Matéria Escura</span>
-        </a>
-        <a class="tv-card tv-card-2" href="https://tv.apple.com/br/show/ted-lasso/umc.cmc.vtoh0mn0xn7t3c643xqonfzy">
-          <span class="tv-kicker">Stream now <em>Comédia</em></span>
-          <span class="tv-title">A comédia está de volta, mais Ted do que nunca.</span>
-          <span class="tv-show-name">Ted Lasso</span>
-        </a>
-        <a class="tv-card tv-card-3" href="https://tv.apple.com/br/show/silo/umc.cmc.3yksgc857px0k0rqe5zd4jice">
-          <span class="tv-kicker">Stream now <em>Ficção científica</em></span>
-          <span class="tv-title">A verdade está no passado.</span>
-          <span class="tv-show-name">Silo</span>
-        </a>
-        <a class="tv-card tv-card-4" href="https://tv.apple.com/br/show/lucky/umc.cmc.5qo7t3nngb2vj0m9dxkwebw1o">
-          <span class="tv-kicker">Stream now <em>Ação</em></span>
-          <span class="tv-title">Anya Taylor-Joy é uma vigarista que luta pela sua vida após um golpe dar errado.</span>
-          <span class="tv-show-name">Lucky</span>
-        </a>
-        <a class="tv-card tv-card-5" href="https://tv.apple.com/br/show/ruptura/umc.cmc.1srk2goyh2q2zdxcx605w8vtx">
-          <span class="tv-kicker">Stream now <em>Suspense</em></span>
-          <span class="tv-title">Viver para trabalhar.</span>
-          <span class="tv-show-name">Ruptura</span>
-        </a>
-        <a class="tv-card tv-card-6" href="https://tv.apple.com/br/show/o-segredo-de-widows-bay/umc.cmc.1zzly0vah46bnvnwf0qkrjhh2">
-          <span class="tv-kicker">Stream now <em>Mistério</em></span>
-          <span class="tv-title">Boas-vindas à ilha. Aproveite a sua estadia. Só não faça muitas perguntas.</span>
-          <span class="tv-show-name">O Segredo de Widow's Bay</span>
-        </a>
-        <a class="tv-card tv-card-7" href="https://tv.apple.com/br/show/mulheres-de-azul/umc.cmc.73wmdmkfpta5ul1vbwckmme39">
-          <span class="tv-kicker">Stream now <em>Policial</em></span>
-          <span class="tv-title">Desafie o sistema. Descubra a verdade.</span>
-          <span class="tv-show-name">Mulheres de Azul</span>
-        </a>
-      </div>
-
-      <button class="tv-nav tv-nav-prev" id="tvPrev" aria-label="Anterior">
-        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M15.5 3.5 6 12l9.5 8.5 1.4-1.5L9 12l7.9-7-1.4-1.5z"/></svg>
-      </button>
-      <button class="tv-nav tv-nav-next" id="tvNext" aria-label="Próximo">
-        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="m8.5 3.5 9.5 8.5-9.5 8.5-1.4-1.5L15 12 7.1 5l1.4-1.5z"/></svg>
-      </button>
-
-      <div class="tv-dots" id="tvDots"></div>
-    </section>
-
-  </main>
-
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="footer">
-    <div class="footer-legal-top">
-      <ol>
-        <li id="footnote-1">1. Testes conduzidos pela Apple em julho de 2025 usando AirPods Pro 3 emparelhados com iPhone 16 com firmware dos AirPods em versão preliminar e iOS 26. A redução de ruído foi testada de acordo com a norma IEC 60268-24. A comparação foi feita com os fones de ouvido sem fio intra-auriculares mais vendidos disponíveis no mercado no momento dos testes. O desempenho depende das configurações do aparelho, do ambiente e de vários outros fatores.</li>
-      </ol>
-      <p>É preciso ter uma assinatura do Apple TV. Aplicam-se outros <a href="https://www.apple.com/br/promo/">termos</a> e restrições.</p>
-      <p>Os recursos estão sujeitos a mudanças. Alguns recursos, apps e serviços podem não estar disponíveis em todas as regiões ou idiomas.</p>
     </div>
 
-    <hr class="footer-rule">
-
-    <div class="footer-columns">
-      <div class="footer-col">
-        <h3>Descobrir e Comprar</h3>
-        <ul>
-          <li><a href="https://www.apple.com/br/shop/goto/store">Loja</a></li>
-          <li><a href="https://www.apple.com/br/mac/">Mac</a></li>
-          <li><a href="https://www.apple.com/br/ipad/">iPad</a></li>
-          <li><a href="https://www.apple.com/br/iphone/">iPhone</a></li>
-          <li><a href="https://www.apple.com/br/watch/">Watch</a></li>
-          <li><a href="https://www.apple.com/br/airpods/">AirPods</a></li>
-          <li><a href="https://www.apple.com/br/tv-home/">TV e Casa</a></li>
-          <li><a href="https://www.apple.com/br/airtag/">AirTag</a></li>
-          <li><a href="https://www.apple.com/br/shop/goto/buy_accessories">Acessórios</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>Carteira da Apple</h3>
-        <ul>
-          <li><a href="https://www.apple.com/br/wallet/">Carteira</a></li>
-          <li><a href="https://www.apple.com/br/apple-pay/">Apple Pay</a></li>
-        </ul>
-        <h3>Sua conta</h3>
-        <ul>
-          <li><a href="https://account.apple.com/br/">Gerencie sua Conta Apple</a></li>
-          <li><a href="https://www.apple.com/br/shop/goto/account">Conta da Apple Store</a></li>
-          <li><a href="https://www.icloud.com">iCloud.com</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>Entretenimento</h3>
-        <ul>
-          <li><a href="https://www.apple.com/br/apple-one/">Apple One</a></li>
-          <li><a href="https://www.apple.com/br/apple-tv/">Apple TV</a></li>
-          <li><a href="https://www.apple.com/br/apple-music/">Apple Music</a></li>
-          <li><a href="https://www.apple.com/br/apple-arcade/">Apple Arcade</a></li>
-          <li><a href="https://www.apple.com/br/apple-fitness-plus/">Apple Fitness+</a></li>
-          <li><a href="https://www.apple.com/br/apple-podcasts/">Apple Podcasts</a></li>
-          <li><a href="https://www.apple.com/br/apple-books/">Apple Books</a></li>
-          <li><a href="https://www.apple.com/br/app-store/">App Store</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>Apple Store</h3>
-        <ul>
-          <li><a href="https://www.apple.com/br/retail/">Encontre uma loja</a></li>
-          <li><a href="https://www.apple.com/br/retail/geniusbar/">Genius Bar</a></li>
-          <li><a href="https://www.apple.com/br/today/">Today at Apple</a></li>
-          <li><a href="https://www.apple.com/br/today/groups/">Reservas para grupos</a></li>
-          <li><a href="https://www.apple.com/br/today/camp/">Apple Camp</a></li>
-          <li><a href="https://apps.apple.com/br/app/apple-store/id375380948">App Apple Store</a></li>
-          <li><a href="https://www.apple.com/br/shop/goto/ww/financing">Financiamento</a></li>
-          <li><a href="https://www.apple.com/br/recycling/">Programa de Reciclagem</a></li>
-          <li><a href="https://www.apple.com/br/shop/goto/order/list">Status do seu pedido</a></li>
-          <li><a href="https://www.apple.com/br/shop/goto/help">Ajuda para comprar</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>Para Empresas</h3>
-        <ul>
-          <li><a href="https://www.apple.com/br/business/">Apple e os negócios</a></li>
-          <li><a href="https://www.apple.com/br/retail/business/">Comprar para a sua empresa</a></li>
-        </ul>
-        <h3>Para a Educação</h3>
-        <ul>
-          <li><a href="https://www.apple.com/br/education/">Apple e a Educação</a></li>
-          <li><a href="https://www.apple.com/br/education/k12/how-to-buy/">Comprar para Educação Básica</a></li>
-          <li><a href="https://www.apple.com/br/shop/goto/educationrouting">Comprar para a faculdade</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>Para a Saúde</h3>
-        <ul>
-          <li><a href="https://www.apple.com/br/healthcare/">Apple e a Saúde</a></li>
-        </ul>
-        <h3>Para o Setor Público</h3>
-        <ul>
-          <li><a href="https://www.apple.com/br/government/">Apple e o Setor público</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>Valores da Apple</h3>
-        <ul>
-          <li><a href="https://www.apple.com/br/accessibility/">Acessibilidade</a></li>
-          <li><a href="https://www.apple.com/br/education-initiative/">Educação</a></li>
-          <li><a href="https://www.apple.com/br/environment/">Meio ambiente</a></li>
-          <li><a href="https://www.apple.com/br/privacy/">Privacidade</a></li>
-          <li><a href="https://www.apple.com/br/supply-chain/">Inovação na cadeia de fornecimento</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>Sobre a Apple</h3>
-        <ul>
-          <li><a href="https://www.apple.com/br/newsroom/">Newsroom</a></li>
-          <li><a href="https://www.apple.com/br/leadership/">Liderança da Apple</a></li>
-          <li><a href="https://www.apple.com/careers/br/">Oportunidades de Carreira</a></li>
-          <li><a href="https://investor.apple.com/">Investidores</a></li>
-          <li><a href="https://www.apple.com/br/compliance/">Ética e Compliance</a></li>
-          <li><a href="https://www.apple.com/br/apple-events/">Eventos</a></li>
-          <li><a href="https://www.apple.com/br/contact/">Contato</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <hr class="footer-rule">
-
-    <div class="footer-bottom">
-      <p>Outras formas de comprar: <a href="https://www.apple.com/br/retail/">encontre uma Apple Store</a> ou <a href="https://locate.apple.com/br/pt/">revendedor Apple</a> na sua região. Ou ligue para <a href="tel:0800-761-0867">0800-761-0867</a>. Rua Leopoldo Couto de Magalhães Jr., 700, 7º andar, Itaim Bibi. São Paulo, SP. CEP: 04542-000.</p>
-      <p>Os Serviços de Mídia da Apple são fornecidos pela Apple Services LATAM LLC.</p>
-      <p class="footer-country"><a href="https://www.apple.com/choose-country-region/">Brasil</a></p>
-      <p>Copyright © 2026 Apple Inc. Todos os direitos reservados. Apple Computer Brasil Ltda. CNPJ: 00.623.904/0003-35</p>
-      <ul class="footer-bottom-links">
-        <li><a href="https://www.apple.com/br/legal/privacy/">Política de Privacidade</a></li>
-        <li><a href="https://www.apple.com/br/shop/goto/help/sales_refunds">Política de vendas</a></li>
-        <li><a href="https://www.apple.com/br/legal/">Avisos legais</a></li>
-        <li><a href="https://www.apple.com/br/sitemap/">Mapa do site</a></li>
-      </ul>
-    </div>
-  </footer>
-
-  <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
-</html>
+</html> 
